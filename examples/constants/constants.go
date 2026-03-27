@@ -1,3 +1,11 @@
+/*
+ * @Author: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @Date: 2026-03-27 12:13:50
+ * @LastEditors: error: error: git config user.name & please set dead value or install git && error: git config user.email & please set dead value or install git & please set dead value or install git
+ * @LastEditTime: 2026-03-27 12:44:35
+ * @FilePath: \gobyexample\examples\constants\constants.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 // Go 支持字符、字符串、布尔和数值 _常量_ 。
 package main
 
@@ -25,4 +33,14 @@ func main() {
 	// 一个数字可以根据上下文的需要（比如变量赋值、函数调用）自动确定类型。
 	// 举个例子，这里的 `math.Sin` 函数需要一个 `float64` 的参数，`n` 会自动确定类型。
 	fmt.Println(math.Sin(n))
+
+	const b = 10000000
+	fmt.Println(math.Sin(b))
+
+	c := getUser()
+	fmt.Println(c)
+}
+
+func getUser() string {
+	return "John"
 }
