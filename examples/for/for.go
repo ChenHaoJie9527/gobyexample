@@ -2,7 +2,9 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
@@ -31,5 +33,24 @@ func main() {
 			continue
 		}
 		fmt.Println(n)
+	}
+
+	for i := 0; i < 10; i++ {
+		if i <= 5 {
+			continue
+		}
+		fmt.Println(i)
+	}
+
+	for i := 0; i < 3; i++ {
+		i := i
+		go func(v int) {
+			fmt.Println(v)
+		}(i)
+	}
+
+	list := []int{1, 2, 3, 4, 5}
+	for idx, val := range list {
+		fmt.Println(idx, val)
 	}
 }
