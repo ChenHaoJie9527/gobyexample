@@ -33,4 +33,28 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD)
+
+	//var arr1 = [5]int{1, 2, 3, 4, 5}
+	//reset(arr1)
+	//fmt.Println("arr1:", arr1)
+
+	var arr2 = [3]string{"hello", "world", "!"}
+	for i, v := range arr2 {
+		if i == 0 {
+			arr2[1] = "react"
+		}
+		fmt.Println(i, ":", v)
+	}
+
+	for i := 0; i < len(arr2); i++ {
+		if i == 0 {
+			arr2[1] = "react"
+		}
+		fmt.Println(i, ":", arr2[i])
+	}
+}
+
+func reset(a [5]int) {
+	a[0] = 100
+	fmt.Println("set:", a)
 }
