@@ -1,0 +1,7 @@
+interface:
+  display_name: "Go Skill Suite"
+  short_description: "中文优先的 Go 总入口，按任务自动组合本地 Go 技能。"
+  default_prompt: "用 $golang-suite 先判断这是什么类型的 Go 任务，再组合最合适的本地技能来完成实现、review、排障、测试、性能优化或生产化加固。"
+
+policy:
+  allow_implicit_invocation: true

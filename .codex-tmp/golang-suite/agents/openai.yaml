@@ -1,0 +1,7 @@
+interface:
+  display_name: "Go Skill Suite"
+  short_description: "统一路由本地 Go 技能，按任务自动组合最合适的子技能。"
+  default_prompt: "Use $golang-suite to classify this Go task first, then route to the right installed skills for coding style, backend design, testing, concurrency, performance, security, observability, and troubleshooting."
+
+policy:
+  allow_implicit_invocation: true
