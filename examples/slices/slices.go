@@ -92,6 +92,9 @@ func main() {
 
 	arr13 := []int{1, 2, 3}
 	arr13 = insertAt(arr13, 1, 10)
+
+	arr14 := uniqueArr([]int{1, 2, 2, 3, 3, 4})
+	fmt.Println("arr14:", arr14)
 }
 
 // 基础题
@@ -226,6 +229,7 @@ func deleteInts(arr []int, i int) []int {
 	return dst
 }
 
+// 实现 insertAt插入
 func insertAt(arr []int, i int, val int) []int {
 	// TODO: insertAt([1,2,3], 1, 10) => result: [1,10,2,3]
 	if i < 0 || i >= len(arr) {
@@ -238,4 +242,20 @@ func insertAt(arr []int, i int, val int) []int {
 
 	fmt.Println("dst:", dst)
 	return dst
+}
+
+// 实现 unique 去重
+func uniqueArr(arr []int) []int {
+	seen := make(map[int]struct{})
+	result := make([]int, 0, len(arr))
+	for _, v := range arr {
+		_, ok := seen[v]
+		fmt.Println("v:", v, "ok:", ok)
+		if ok {
+			continue
+		}
+		seen[v] = struct{}{}
+		result = append(result, v)
+	}
+	return result
 }
